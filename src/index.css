@@ -1,0 +1,14 @@
+/*
+ * Globals
+ */
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  background-image: url('./background.jpg') ;
+  background-size: cover;
+}
+
