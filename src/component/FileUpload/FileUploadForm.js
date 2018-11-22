@@ -18,12 +18,13 @@ class FileUpload extends Component {
    * @memberof FileUpload
    */
   handleUploadImage(ev) {
+    const { uploadEndpoint } = this.props;
     ev.preventDefault();
     const data = new FormData();
     data.append('file', this.uploadInput.files[0]);
     data.append('filename', 'test.upload');
 
-    fetch('http://localhost:8000/upload', {
+    fetch(uploadEndpoint, {
       method: 'POST',
       body: data,
     })
@@ -84,5 +85,9 @@ class FileUpload extends Component {
     );
   }
 }
+
+FileUpload.defaultProps = {
+  uploadEndpoint: './upload',
+};
 
 export default FileUpload;

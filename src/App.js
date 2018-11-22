@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import FileUpload from "./component/FileUpload/FileUploadForm";
-import { Container, Card, Divider } from "semantic-ui-react";
-import "./App.css";
+import React, { Component } from 'react';
+import FileUpload from './component/FileUpload/FileUploadForm';
+import { Container, Card, Divider } from 'semantic-ui-react';
+import './App.css';
 
 class App extends Component {
   render() {
