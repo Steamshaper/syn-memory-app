@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import FileUpload from './component/FileUpload/FileUploadForm';
 import { Container, Card, Divider } from 'semantic-ui-react';
+import 'filepond/dist/filepond.min.css';
 import './App.css';
+import Uploader from './containers/Uploader';
 
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
         <Card fluid>
           <Card.Content>
             <Card.Description>
-              <FileUpload />
+              <Uploader />
             </Card.Description>
           </Card.Content>
         </Card>
