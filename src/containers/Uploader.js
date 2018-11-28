@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import FileUploadForm from '../components/FileUpload/FileUploadForm';
 import { connect } from 'react-redux';
 import { add, stop } from '../store/FileManager/action';

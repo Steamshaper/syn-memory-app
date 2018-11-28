@@ -4,7 +4,9 @@ import thunkMiddleware from 'redux-thunk';
 const defaultInitialState = {};
 
 const configureStore = (initState = defaultInitialState) => {
-  const rootReducer = combineReducers(state => state);
+  const rootReducer = combineReducers({
+    sys: (state = { init: Date.UTC() }) => state,
+  });
   const store = createStore(
     rootReducer,
     initState,
