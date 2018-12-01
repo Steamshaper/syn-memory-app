@@ -37,7 +37,17 @@ class FileUploadForm extends Component {
           header="Have you heard about our mailing list?"
           content="Get the best news in your e-mail every day."
         />
-        <FilePond allowMultiple={true} server="./v1/memorize" />
+        <FilePond
+          allowMultiple={true}
+          server={{
+            url: './v1/memorize',
+            revert: {
+              headers: {
+                'content-type': 'application/json; charset=utf-8',
+              },
+            },
+          }}
+        />
         <Button color="olive" type="submit">
           <Icon name="cloud upload" /> Upload
         </Button>
